@@ -1,4 +1,6 @@
 import { Container } from "./styles"
+import { DeletePhoto } from "../DeletePhoto"
+import { deletePhoto } from "../../services/photos"
 
 type PropsPhotoItem = {
   url: string;
@@ -6,10 +8,19 @@ type PropsPhotoItem = {
 }
 
 export function PhotoItem({ url, name }: PropsPhotoItem) {
+
+  async function handleDeletePhoto(name: string) {
+    await deletePhoto(name)
+    window.location.reload()
+  }
+
   return (
-    <Container>
+    <Container >
       <img src={url} alt={name}></img>
       {name}
-    </Container>
+
+      <DeletePhoto name={name} onDelete={handleDeletePhoto} />
+
+    </Container >
   )
 }

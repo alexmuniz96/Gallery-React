@@ -5,7 +5,7 @@ import { ScreenWarning } from "./components/ScreenWarning"
 import { PhotoList } from "./components/PhotoList/index"
 import { UploadForm } from "./components/UploadForm"
 
-import { getAll, } from "./services/photos"
+import { getAll } from "./services/photos"
 import { Photo } from "./types/Photo"
 
 function App() {

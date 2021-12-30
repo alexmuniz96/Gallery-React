@@ -2,6 +2,7 @@ import { Container } from "./styles"
 import { Photo } from "../../types/Photo"
 import { PhotoItem } from "../PhotoItem/index"
 
+
 type PropsPhotoList = {
   photos: Photo[]
 }
